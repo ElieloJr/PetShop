@@ -63,8 +63,8 @@ const ListaDePost = () =>{
     return(
         <section className="posts container">
             {
-                posts.map((post) => {
-                    <Link className={`cartao-post cartao-post--${post.categoria}`}>
+                posts.map(post => 
+                    <Link to="/" className={`cartao-post cartao-post--${post.categoria}`}>
                         <article key={post.id}>
                             <h3 className="cartao-post__titulo">
                                 {post.title}
@@ -74,18 +74,8 @@ const ListaDePost = () =>{
                             </p>
                         </article>
                     </Link>
-                })
+                )
             }
-            {/* <Link to="/" className="cartao-post cartao-post--bem-estar">
-                    <article key="1">
-                        <h3 className="cartao-post__titulo">
-                            Banho no cão
-                        </h3>
-                        <p className="cartao-post__meta">
-                        Use as utensilios certos para banhar seu cão
-                        </p>
-                    </article>
-                </Link> */}
         </section>
     )
 }
